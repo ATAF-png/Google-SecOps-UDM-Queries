@@ -1,0 +1,1 @@
+(metadata.event_type = "NETWORK_DNS" and re.regex(network.dns.questions.name, `\b[a-zA-Z0-9]{10,}\.(com|net|org|info|biz|xyz)\b`)) or (metadata.event_type = "NETWORK_HTTP" and re.regex(target.url, `\/beacon`))
