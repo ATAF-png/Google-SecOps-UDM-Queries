@@ -1,0 +1,2 @@
+metadata.event_type = "NETWORK_CONNECTION"
+(re.regex(target.process.file.full_path, `anydesk\.exe`) nocase OR re.regex(target.process.file.full_path, `teamviewer\.exe`) nocase)
