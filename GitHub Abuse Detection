@@ -1,0 +1,4 @@
+metadata.event_type = "NETWORK_CONNECTION"
+re.regex(target.url, `github\.com`)
+(network.http.method = "POST" OR re.regex(target.url, `/raw/`) OR re.regex(target.url, `/blob/`) OR re.regex(target.url, `/gist/`))
+principal.location.country_or_region != "US" AND principal.location.country_or_region != "CA" AND principal.location.country_or_region != "GB" AND principal.location.country_or_region != "DE" AND principal.location.country_or_region != "FR"
