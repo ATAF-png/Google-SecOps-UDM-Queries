@@ -1,0 +1,2 @@
+re.regex(security_result.rule_name, `UnauthorizedAccess`) OR re.regex(security_result.rule_name, `CryptoCurrency`) OR re.regex(security_result.rule_name, `TorIPCaller`) OR re.regex(security_result.rule_name, `BitcoinTool`)
+metadata.product_name = "GuardDuty"
