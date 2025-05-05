@@ -1,0 +1,6 @@
+metadata.vendor_name = "KnowBe4"
+metadata.product_name = "PhishER"
+metadata.product_event_type = "Alert"
+network.application_protocol = "SMTP"
+security_result.category = "MAIL_PHISHING"
+security_result.action = "ALLOW"
