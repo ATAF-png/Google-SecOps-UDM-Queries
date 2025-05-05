@@ -1,0 +1,2 @@
+metadata.event_type = "NETWORK_CONNECTION"
+(domain = "xmrpool.eu" OR domain = "minexmr.com" OR domain = "ethpool.org")
