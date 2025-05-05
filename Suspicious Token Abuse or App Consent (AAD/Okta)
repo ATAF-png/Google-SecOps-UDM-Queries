@@ -1,0 +1,1 @@
+(metadata.product_name = "Azure AD" OR metadata.product_name = "Okta") AND (re.regex(security_result.description, `(?i)token`) OR re.regex(security_result.description, `(?i)consent`))
