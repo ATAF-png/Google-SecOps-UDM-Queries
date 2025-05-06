@@ -1,1 +1,26 @@
-(principal.location.country_or_region = "Russia" OR principal.location.country_or_region = "China" OR principal.location.country_or_region = "North Korea" OR principal.location.country_or_region = "Iran" OR principal.location.country_or_region = "Belarus") OR (re.regex(principal.hostname, `\*chinanet\*`) OR re.regex(principal.hostname, `\*rostelecom\*`) OR re.regex(principal.hostname, `\*iranian\*`) OR re.regex(principal.hostname, `\*nkorea\*`) OR re.regex(principal.hostname, `\*mtnet\*`)) OR (principal.ip = "1.2.3.4" OR principal.ip = "5.6.7.8")
+(
+  (
+    principal.ip_geo_artifact.network.organization_name = "Transtelekom" OR
+    principal.ip_geo_artifact.network.organization_name = "china unicom" OR
+    principal.ip_geo_artifact.network.organization_name = "star joint venture" OR
+    principal.ip_geo_artifact.network.organization_name = "china mobile" OR
+    principal.ip_geo_artifact.network.organization_name = "china telecom" OR
+    principal.ip_geo_artifact.network.organization_name = "rostelecom" OR
+    principal.ip_geo_artifact.network.organization_name = "ojsc rtcomm.ru" OR
+    principal.ip_geo_artifact.network.organization_name = "iran telecommunication company" OR
+    principal.ip_geo_artifact.network.organization_name = "beltelcom" OR
+    principal.ip_geo_artifact.network.organization_name = "pakistan telecommunication company"
+  )
+  OR net.ip_in_range_cidr(principal.ip, "175.45.176.0/22") OR net.ip_in_range_cidr(principal.ip, "210.52.109.0/24")
+)
+AND (
+  principal.location.country_or_region = "russia" OR
+  principal.location.country_or_region = "belarus" OR
+  principal.location.country_or_region = "n korea" OR
+  principal.location.country_or_region = "iran" OR
+  principal.location.country_or_region = "brazil" OR
+  principal.location.country_or_region = "romania" OR
+  principal.location.country_or_region = "cuba" OR
+  principal.location.country_or_region = "china"
+)
+
