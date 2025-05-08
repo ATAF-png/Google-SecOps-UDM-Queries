@@ -1,0 +1,8 @@
+metadata.log_type = "GCP_CLOUDAUDIT"
+metadata.product_name = "Google Cloud IAM"
+metadata.event_type = "USER_RESOURCE_UPDATE_PERMISSIONS"
+target.application = "iam.googleapis.com"
+security_result.action = "ALLOW"
+target.resource.attribute.labels["ser_binding_deltas_action"] = "ADD"
+re.regex(target.resource.attribute.labels["ser_binding_deltas_role"], `roles\/(owner|editor|iam\.admin)`)
+re.regex(target.resource.attribute.labels["ser_binding_deltas_member"], `allUsers|allAuthenticatedUsers`)
