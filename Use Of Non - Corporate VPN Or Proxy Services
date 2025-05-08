@@ -1,0 +1,5 @@
+(metadata.event_type = "NETWORK_CONNECTION" OR metadata.event_type = "NETWORK_HTTP")
+NOT re.regex(principal.ip_geo_artifact.network.organization_name, `my-company-name\.com`) nocase
+NOT re.regex(target.ip_geo_artifact.network.organization_name, `my-company-name\.com`) nocase
+NOT re.regex(principal.ip_geo_artifact.network.organization_name, `my-company-name`) nocase
+NOT re.regex(target.ip_geo_artifact.network.organization_name, `my-company-name`) nocase
