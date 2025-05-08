@@ -1,0 +1,3 @@
+metadata.event_type = "USER_CREATION"
+(timestamp.get_hour(metadata.event_timestamp.seconds, "UTC") < 9 OR
+ timestamp.get_hour(metadata.event_timestamp.seconds, "UTC") > 17)
