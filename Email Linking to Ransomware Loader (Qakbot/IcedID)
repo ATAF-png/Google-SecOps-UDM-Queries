@@ -1,0 +1,2 @@
+metadata.event_type = "EMAIL_TRANSACTION"
+(re.regex(target.url, `bit\.ly|tinyurl|we\.tl|onedrive\.live\.com`) AND re.regex(target.file.full_path, `\.(zip|iso)$`))
