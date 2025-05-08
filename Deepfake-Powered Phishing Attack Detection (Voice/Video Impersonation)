@@ -1,0 +1,5 @@
+metadata.event_type = "PROCESS_LAUNCH"
+NOT re.regex(principal.process.file.signature_info.sigcheck.signers.name, `Microsoft Windows Production PCA 2011`)
+(re.regex(principal.process.file.full_path, `obs64\.exe`) OR re.regex(principal.process.file.full_path, `zoom\.exe`) OR re.regex(principal.process.file.full_path, `teams\.exe`) OR re.regex(principal.process.file.full_path, `skype\.exe`) OR re.regex(principal.process.file.full_path, `chrome\.exe`))
+(re.regex(principal.process.command_line, `--enable-media-stream`) OR re.regex(principal.process.command_line, `--audio-input`) OR re.regex(principal.process.command_line, `--video-input`))
+NOT re.regex(principal.user.userid, `known_user1|known_user2`)
