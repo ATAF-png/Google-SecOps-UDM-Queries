@@ -1,0 +1,8 @@
+metadata.product_name = "Falcon"
+metadata.vendor_name = "Crowdstrike"
+re.regex(principal.process.command_line, `.*(powershell|cmd)\.exe.*`) nocase
+re.regex(target.process.command_line, `.*(SugarGh0st RAT|Gh0st32\.exe|Gh0st64\.exe).*`) nocase
+outcome:
+    $process_commandline = principal.process.command_line
+    $description = metadata.description
+    $event_type = metadata.event_type
