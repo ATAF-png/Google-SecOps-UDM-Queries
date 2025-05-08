@@ -1,0 +1,6 @@
+metadata.vendor_name = "Microsoft"
+metadata.product_name = "SharePoint"
+metadata.event_type = "FILE_MODIFICATION"
+re.regex(target.file.full_path, `sensitive`) nocase
+re.regex(target.file.full_path, `\.doc|\.docx|\.pdf|\.xlsx`) nocase
+re.regex(target.file.full_path, `external`) nocase
