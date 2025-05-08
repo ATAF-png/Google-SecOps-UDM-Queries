@@ -1,0 +1,2 @@
+metadata.event_type = "FILE_CREATION"
+re.regex(target.file.full_path, `\\\\?\\Volume{[A-F0-9\\-]+}\\?`) nocase
