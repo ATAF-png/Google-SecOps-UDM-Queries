@@ -1,0 +1,4 @@
+(metadata.event_type = "PROCESS_LAUNCH" OR metadata.event_type = "NETWORK_CONNECTION")
+re.regex(target.process.file.full_path, `Lumma`) nocase
+re.regex(target.process.file.full_path, `(Temp|Roaming)`) nocase
+re.regex(target.url, `voznessxyy\.life\/gate\.php\/bnaz`)
