@@ -1,0 +1,3 @@
+metadata.event_type = "PROCESS_LAUNCH"
+re.regex(principal.process.command_line, `wmic`) nocase
+re.regex(principal.process.command_line, `remote`) nocase
