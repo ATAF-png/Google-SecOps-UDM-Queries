@@ -1,0 +1,4 @@
+metadata.vendor_name = "Microsoft"
+metadata.product_name = "Office 365"
+security_result.category = "AUTH_VIOLATION"
+security_result.summary = "Potential Stolen Session Cookie Usage"
