@@ -1,0 +1,3 @@
+metadata.event_type = "DEVICE_PROGRAM_UPLOAD"
+target.user.account_type = "DEFAULT_ACCOUNT_TYPE"
+target.user.last_login_time.seconds < timestamp.current_seconds() - 15552000
