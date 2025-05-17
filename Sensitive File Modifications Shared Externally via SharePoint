@@ -1,0 +1,5 @@
+metadata.vendor_name = "Microsoft"
+metadata.product_name = "SharePoint"
+metadata.event_type = "FILE_MODIFICATION"
+re.regex(target.file.full_path, `sensitive`)
+target.resource.attribute.labels["sharing_scope"] = "external"
