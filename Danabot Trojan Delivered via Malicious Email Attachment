@@ -1,0 +1,4 @@
+metadata.event_type = "EMAIL_TRANSACTION"
+security_result.threat_name = "Danabot"
+security_result.category = "SOFTWARE_MALICIOUS"
+re.regex(about.file.full_path, `\.(exe|dll|vbs|js|scr)$`) nocase
