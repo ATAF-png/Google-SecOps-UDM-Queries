@@ -1,0 +1,13 @@
+metadata.event_type = "NETWORK_SMTP"
+network.direction = "OUTBOUND"
+principal.asset.type = "WORKSTATION"
+principal.ip = $src_ip
+target.ip = $target_ip
+match:
+    $src_ip, $target_ip
+outcome:
+    $total_sent_bytes = sum(network.sent_bytes)
+    $total_recipients = count_distinct(network.email.to)
+    $total_connections = count(metadata.id)
+order:
+    $total_sent_bytes desc
