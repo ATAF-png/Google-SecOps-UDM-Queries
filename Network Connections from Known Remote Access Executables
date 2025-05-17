@@ -1,0 +1,2 @@
+metadata.event_type = "NETWORK_CONNECTION"
+re.regex(principal.process.file.full_path, `(teamviewer|anydesk|zoom|logmein|gotoassist|ammyy|tightvnc|realvnc|nomachine|chrome remote desktop|splashtop).exe`) nocase
