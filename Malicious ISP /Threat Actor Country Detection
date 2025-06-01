@@ -13,7 +13,7 @@
   )
   OR net.ip_in_range_cidr(principal.ip, "175.45.176.0/22") OR net.ip_in_range_cidr(principal.ip, "210.52.109.0/24")
 )
-AND (
+OR (
   principal.location.country_or_region = "russia" OR
   principal.location.country_or_region = "belarus" OR
   principal.location.country_or_region = "n korea" OR
