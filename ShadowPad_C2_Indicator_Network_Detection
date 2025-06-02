@@ -1,0 +1,1 @@
+metadata.event_type = "NETWORK_CONNECTION" AND (network.application_protocol = "HTTP" OR network.application_protocol = "HTTPS") AND target.ip = "<known_shadowpad_c2_ip>"
