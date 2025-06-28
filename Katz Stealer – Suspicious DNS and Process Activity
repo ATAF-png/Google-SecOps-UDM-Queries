@@ -1,0 +1,10 @@
+(
+metadata.product_name = "Crowdstrike" AND metadata.vendor_name = "Falcon" AND metadata.event_type = "NETWORK_DNS" AND re.regex(network.dns.questions.name, `(katzstealer|katzv01|katzv02)\.top`)
+) OR (
+metadata.product_name = "Crowdstrike" AND metadata.vendor_name = "Falcon" AND metadata.event_type = "PROCESS_LAUNCH" AND re.regex(principal.process.file.full_path, `(katzstealer|katzv01|katzv02)\.exe`)
+)
+outcome:
+  $event_type = metadata.event_type
+  $log_type = metadata.log_type
+  $principal_process_path = principal.process.file.full_path
+  $target_process_path = target.process.file.full_path
