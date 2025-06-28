@@ -1,1 +1,1 @@
-raw=/notepad++/
+re.regex(file_path, `notepad\+\+`)
