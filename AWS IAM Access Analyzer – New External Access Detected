@@ -1,0 +1,4 @@
+metadata.log_type = "AWS_CLOUDTRAIL"
+metadata.product_name = "AWS IAM Access Analyzer"
+metadata.product_event_type = "New External Access Detected"
+security_result.action = "ALLOW"
