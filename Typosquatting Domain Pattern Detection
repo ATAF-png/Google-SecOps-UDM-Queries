@@ -1,0 +1,8 @@
+network.dns.questions.name = $domain
+re.regex($domain, `^(?!([a-z0-9-]+)\.\2)([a-z0-9]{2,}[0o1l]{1,}[a-z0-9-]*\.(com|net|org|co\.uk|info))$`)
+match:
+  $domain
+outcome:
+  $count = count(metadata.id)
+order:
+  $count desc
