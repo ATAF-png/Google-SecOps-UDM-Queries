@@ -1,0 +1,3 @@
+metadata.event_type = "NETWORK_SMTP"
+principal.asset.type = "WORKSTATION"
+network.sent_bytes > 1000000
