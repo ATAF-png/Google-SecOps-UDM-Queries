@@ -1,0 +1,9 @@
+(
+metadata.event_type = "NETWORK_CONNECTION" and
+re.regex(target.process.file.full_path, `ScreenConnect\.Client\.exe`) nocase
+)
+or
+(
+metadata.event_type = "PROCESS_LAUNCH" and
+re.regex(target.process.file.full_path, `ScreenConnect`) nocase
+)
