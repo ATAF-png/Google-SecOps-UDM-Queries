@@ -1,0 +1,3 @@
+metadata.product_event_type = "NETWORK_HTTP"
+re.regex(principal.network.http.user_agent, `(?i)(python-requests|curl|go-http-client|okhttp|libwww-perl|java|nikto|masscan|zgrab|googlebot)`)
+target.network.organization_name = "DigitalOcean" OR target.network.organization_name = "OVH" OR target.network.organization_name = "M247" OR target.network.organization_name = "Contabo" OR target.network.organization_name = "Private Internet Access" OR target.network.organization_name = "ProtonVPN" OR target.network.organization_name = "NordVPN" OR target.network.organization_name = "Tor" OR target.network.organization_name = "HideMyAss"
