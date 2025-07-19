@@ -1,0 +1,4 @@
+metadata.event_type = "NETWORK_CONNECTION"
+principal.platform = "MAC"
+re.regex(principal.process.file.full_path, `python`)
+(target.port = 115200 OR target.port = 57600 OR target.port = 38400 OR target.port = 19200 OR target.port = 9600 OR target.port = 4800 OR target.port = 2400 OR target.port = 1200 OR target.port = 300)
