@@ -1,0 +1,3 @@
+metadata.event_type = "PROCESS_LAUNCH"
+re.regex(principal.process.file.full_path, `osascript`)
+re.regex(target.process.command_line, `System Events`)
