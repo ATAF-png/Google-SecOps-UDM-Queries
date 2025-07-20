@@ -1,0 +1,1 @@
+metadata.event_type = "PROCESS_LAUNCH" AND target.process.file.full_path = "bitsadmin.exe" AND principal.user.role_name != "admin"
