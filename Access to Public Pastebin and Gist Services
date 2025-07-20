@@ -1,0 +1,6 @@
+metadata.product_event_type = "NETWORK_HTTP" AND (
+  target.domain.name = "pastebin.com" OR
+  target.domain.name = "ghostbin.com" OR
+  target.domain.name = "pasteee.org" OR
+  target.domain.name = "gist.github.com"
+)
