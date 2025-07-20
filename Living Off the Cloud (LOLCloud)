@@ -1,0 +1,3 @@
+metadata.event_type = "NETWORK_HTTP"
+re.regex(target.url, `storage\.googleapis\.com`)
+network.http.method = "POST"
