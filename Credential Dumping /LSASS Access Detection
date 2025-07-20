@@ -1,0 +1,3 @@
+metadata.event_type = "PROCESS_LAUNCH"
+re.regex(target.process.command_line, `(?i)(lsass|procdump|mimikatz|sekurlsa)`)
+principal.user.userid != "SYSTEM"
