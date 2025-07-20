@@ -1,0 +1,4 @@
+metadata.product_event_type = "NETWORK_CONNECTION"
+target.ip_geo_artifact.network.organization_name = "Amazon"
+target.port = 22
+NOT strings.contains(principal.asset.labels.value, "dev")
