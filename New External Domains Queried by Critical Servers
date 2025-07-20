@@ -1,0 +1,4 @@
+metadata.product_event_type = "NETWORK_DNS"
+strings.contains(principal.asset.labels.value, "prod")
+re.regex(principal.hostname, `.*db.*|.*server.*`)
+target.domain.name != ""
