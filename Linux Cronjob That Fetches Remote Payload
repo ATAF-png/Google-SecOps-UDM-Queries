@@ -1,0 +1,9 @@
+metadata.product_name = "Chronicle EDR"
+metadata.product_event_type = "PROCESS_EXECUTION"
+principal.process.file.full_path = "/usr/bin/cron"
+re.regex(target.process.command_line, `(curl|wget|python|perl|php)`)
+re.regex(target.process.command_line, `(http|https)`)
+outcome:
+  $command_line = target.process.command_line
+  $user = principal.user.userid
+  $hostname = principal.hostname
