@@ -1,0 +1,7 @@
+(metadata.product_name = "Azure AD" OR metadata.product_name = "Entra ID")
+metadata.event_type = "USER_LOGIN"
+(re.regex(security_result.description, `Device code flow`) nocase AND
+ re.regex(security_result.description, `Phishing`) nocase AND
+ re.regex(network.email.from, `@`))
+about.labels.value = $click
+$click = "71" or $click = "9"
