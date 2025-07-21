@@ -1,0 +1,1 @@
+metadata.vendor_name = "MICROSOFT" AND ( target.resource.name = "Microsoft.Graph/servicePrincipals/create" OR target.resource.name = "Microsoft.Graph/servicePrincipals/update" OR target.resource.name = "Microsoft.Graph/servicePrincipals/delete" )
