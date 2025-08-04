@@ -1,0 +1,5 @@
+metadata.log_type = "GCP_CLOUDAUDIT"
+AND metadata.product_name = "Google Cloud Storage"
+AND metadata.event_type = "RESOURCE_PERMISSIONS_CHANGE"
+AND re.regex(target.resource.attribute.labels["ser_binding_deltas_action"], "ADD")
+AND re.regex(target.resource.attribute.labels["ser_binding_deltas_role"], "roles/storage.admin|roles/storage.objectAdmin|roles/owner")
