@@ -1,5 +1,9 @@
 metadata.log_type = "AWS_CLOUDTRAIL"
-(
-  re.regex(principal.ip_geo_artifact.network.organization_name, `TOR`) or
-  re.regex(principal.ip_geo_artifact.network.organization_name, `Proxy`)
-)
+AND target.resource.name != ""
+AND re.regex(principal.ip_geo_artifact.network.organization_name, `(?i)TOR`)
+OR metadata.log_type = "AWS_CLOUDTRAIL"
+AND target.resource.name != ""
+AND re.regex(principal.ip_geo_artifact.network.organization_name, `(?i)Amazon EC2`)
+OR metadata.log_type = "AWS_CLOUDTRAIL"
+AND target.resource.name != ""
+AND re.regex(principal.ip_geo_artifact.network.organization_name, `(?i)Anonymous`)
