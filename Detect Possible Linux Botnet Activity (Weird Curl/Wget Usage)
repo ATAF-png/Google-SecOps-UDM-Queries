@@ -1,0 +1,8 @@
+metadata.event_type = "PROCESS_LAUNCH"
+principal.asset.asset_type = "HOST"
+principal.asset.os_family = "LINUX"
+(
+  re.regex(target.process.command_line, "(curl|wget).*http") nocase OR
+  re.regex(target.process.command_line, "(curl|wget).*pastebin") nocase OR
+  re.regex(target.process.command_line, "(curl|wget).*\.onion") nocase
+)
