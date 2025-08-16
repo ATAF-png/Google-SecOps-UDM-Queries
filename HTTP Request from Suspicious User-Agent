@@ -1,0 +1,13 @@
+metadata.event_type = "NETWORK_HTTP"
+AND (
+  network.http.user_agent = "*python-requests*" OR
+  network.http.user_agent = "*scrapy*" OR
+  network.http.user_agent = "*curl*" OR
+  network.http.user_agent = "*wget*" OR
+  network.http.user_agent = "*bot*" OR
+  network.http.user_agent = "*spider*"
+)
+AND NOT (
+  network.http.user_agent = "*Googlebot*" OR
+  network.http.user_agent = "*Bingbot*"
+)
