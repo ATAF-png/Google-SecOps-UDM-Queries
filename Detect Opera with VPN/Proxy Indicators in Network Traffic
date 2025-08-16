@@ -1,0 +1,4 @@
+metadata.event_type = "NETWORK_CONNECTION"
+strings.contains(principal.process.file.full_path, "opera")
+(target.port = 443 OR target.port = 80)
+(strings.contains(target.ip, "vpn") OR strings.contains(target.hostname, "opera.com") OR strings.contains(target.hostname, "opera-mini.net"))
