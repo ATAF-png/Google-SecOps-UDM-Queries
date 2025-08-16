@@ -1,0 +1,10 @@
+metadata.product_name = "Kubernetes"
+(
+  re.regex(target.process.command_line, `kubectl\s+get\s+pods`) nocase or
+  re.regex(target.process.command_line, `kubectl\s+get\s+services`) nocase or
+  re.regex(target.process.command_line, `kubectl\s+get\s+namespaces`) nocase or
+  re.regex(target.process.command_line, `kubectl\s+get\s+secrets`) nocase or
+  re.regex(target.process.command_line, `kubectl\s+get\s+configmaps`) nocase or
+  re.regex(target.process.command_line, `kubectl\s+get\s+nodes`) nocase or
+  re.regex(target.process.command_line, `kubectl\s+get\s+cluster-info`) nocase
+)
