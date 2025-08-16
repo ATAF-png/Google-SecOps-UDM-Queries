@@ -1,0 +1,12 @@
+metadata.event_type = "PROCESS_LAUNCH"
+(
+  re.regex(target.process.command_line, `dsadd server`) nocase OR
+  re.regex(target.process.command_line, `dcpromo`) nocase OR
+  re.regex(target.process.command_line, `ntdsutil.*"ac i ad"`) nocase OR
+  re.regex(target.process.command_line, `ntdsutil.*"ac i krb5"`) nocase OR
+  re.regex(target.process.command_line, `ntdsutil.*"ac i sm"`) nocase OR
+  re.regex(target.process.command_line, `ntdsutil.*"ac i qm"`) nocase OR
+  re.regex(target.process.command_line, `ntdsutil.*"ac i sd"`) nocase OR
+  re.regex(target.process.command_line, `ntdsutil.*"ac i se"`) nocase OR
+  re.regex(target.process.command_line, `ntdsutil.*"ac i dr"`) nocase
+)
