@@ -1,0 +1,3 @@
+metadata.event_type = "USER_LOGIN"
+AND metadata.product_event_type = "ConditionalAccessPolicyResult"
+AND security_result.action = "BLOCK"
