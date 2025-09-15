@@ -1,0 +1,2 @@
+metadata.vendor_name = "Zscaler"
+(security_result.category = "TOR_EXIT_NODE" OR security_result.category = "NETWORK_SUSPICIOUS")
