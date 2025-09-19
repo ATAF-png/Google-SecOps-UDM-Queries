@@ -1,0 +1,3 @@
+metadata.event_type = "SETTING_CREATION"
+re.regex(target.resource.name, `ForwardingRule`)
+re.regex(target.resource.attribute.labels["forwarding_address"], `@(?:gmail\.com|yahoo\.com|hotmail\.com|outlook\.com|aol\.com|protonmail\.com|mail\.com|zoho\.com|icloud\.com)`)
