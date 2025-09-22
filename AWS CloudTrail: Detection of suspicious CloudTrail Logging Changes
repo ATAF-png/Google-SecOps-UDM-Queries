@@ -1,0 +1,8 @@
+metadata.log_type = "AWS_CLOUDTRAIL"
+(
+  metadata.product_event_type = "UpdateTrail" or
+  metadata.product_event_type = "StopLogging" or
+  metadata.product_event_type = "DeleteTrail" or
+  metadata.product_event_type = "PutEventSelectors"
+)
+security_result.action = "ALLOW"
