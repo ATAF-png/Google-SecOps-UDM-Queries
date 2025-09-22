@@ -1,0 +1,2 @@
+metadata.log_type = "NETSKOPE_ALERT"
+security_result.summary = "[CASB-DLP] Data Exfiltration On Unauthorized Cloud Storage"
