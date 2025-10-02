@@ -1,0 +1,2 @@
+metadata.event_type = "NETWORK_HTTP"
+strings.contains(target.url, "/hidden-admin")
