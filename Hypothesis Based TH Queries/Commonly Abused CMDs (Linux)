@@ -1,0 +1,43 @@
+// this search looks for commonly used commands on Linux by attackers
+// comments explaining malicious use(s) for the command
+
+// network reconnaissance and scanning
+
+target.process.command_line = /^nmap/ OR //scanning for open ports, services and vulnerabilities
+target.process.command_line = /^ping/ OR // determine if a target is online (also to flood a target with ICMP packets for denial of service attacks)
+target.process.command_line = /^netstat/ OR // identify active connections and services on a compromised system
+target.process.command_line = /^curl/ OR target.process.command_line = /^wget/ OR // download malicious scripts or tools
+
+// exploitation and privilege escalation
+
+target.process.command_line = /^ssh/ OR // brute-force or exploit weak credentials to gain unauthorised access
+target.process.command_line = /^sudo/ OR // exploit misconfigured sudo permissions to gain root access
+target.process.command_line = /^find/ OR // locate sensitive files or setuid binaries for privilege escalation
+target.process.command_line = /^chmod/ OR // modify permissions to execute malicious files or scripts
+
+// persistence and backdoors
+
+target.process.command_line = /^cron/ OR // create persistent backdoors by scheduling malicious scripts
+file_path = /\.ssh\/authorised_keys/ OR // add an attacker's public key to `~/.ssh/authorized_keys` for persistent access
+target.process.command_line = /^nc/ OR // create reverse shells or backdoors
+
+// data exfiltration
+
+target.process.command_line = /^scp/ OR // exfiltrate stolen data
+target.process.command_line = /^tar/ OR // compress stolen data for exfiltration
+target.process.command_line = /^base64/ OR // encode stolen data to avoid detection
+
+// denial of service
+
+target.process.command_line = /^dd/ OR // overwrite disk space or create large files to exhaust resources
+
+// covering tracks
+
+target.process.command_line = /^history/ OR // clear command history to avoid detection
+target.process.command_line = /^shred/ OR // destroy evidence
+target.process.command_line = /^rm/ OR // delete logs or evidence
+
+// social engineering and phishing
+
+target.process.command_line = /^openssl/ OR // create fake certificates for phishing sites
+target.process.command_line = /^sed/ OR target.process.command_line = /^awk/ // modify configuration files or scripts for malicious purposes
