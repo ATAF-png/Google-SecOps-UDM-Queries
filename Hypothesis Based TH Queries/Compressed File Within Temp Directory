@@ -1,0 +1,14 @@
+(
+  file_path = /C:\\Windows\\Temp\\./ OR
+  file_path = /C:\\Temp\\./ OR
+  file_path = /C:\\Users\\[^\\]+\\AppData\\Local\\Temp\\./ OR
+  file_path = /\/tmp\/\./ OR
+  file_path = /\/var\/tmp\/.*/
+)
+AND
+(
+  src.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|iso|cab/ OR
+  about.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|iso|cab/ OR
+  target.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|iso|cab/ OR
+  principal.file.mime_type = /zip|rar|7z|tar|gzip|bz2|xz|tar\.gz|tar\.bz2|tar\.xz|tgz|iso|cab/
+)
