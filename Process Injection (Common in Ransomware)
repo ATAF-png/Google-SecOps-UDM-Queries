@@ -1,0 +1,2 @@
+metadata.event_type = "PROCESS_INJECTION"
+re.regex(principal.process.file.full_path, `svchost\.exe`) nocase
