@@ -1,0 +1,3 @@
+metadata.event_type = "NETWORK_HTTP"
+network.http.method = "POST"
+re.regex(target.url, `\/admin`)
