@@ -1,0 +1,34 @@
+// this search looks for commonly attacked ports by threat actors
+// comments for port associated tool(s) and use(s)
+
+(network.ip_protocol = "TCP" AND (
+	(target.port = 20 OR target.port = 21) OR // ftp - unencrypted file transfers; brute-force attacks, credential sniffing
+	target.port = 22 OR // ssh - brute-force login attempts, misconfigured keys
+	target.port = 23 OR // telnet - unencrypted remote access; credential interception
+	target.port = 25 OR // smtp  - spam/phishing relay, misconfigured mail servers
+	target.port = 53 OR // dns - dns amplification ddos, cache poisoning, runneling
+	target.port = 80 OR // http - web vulnerabilities (sqli, xss), server exploits
+	target.port = 110 OR // pop3 - unencrypted email retrieval
+	(target.port = 135 OR target.port = 136 OR target.port = 137 OR target.port = 138 OR target.port = 139) OR // netbios/smb - exploits (e.g., eternalblue), network enumeration
+	target.port = 143 OR // imap - unencrypted email access
+	target.port = 389 OR // ldap - brute-force attacks, directory harvesting
+	target.port = 443 OR // https - ssl/tls vulnerabilities, phishing sites
+	target.port = 445 OR // smb - ransomware (e.g., wannacry), file-sharing exploits
+	target.port = 1433 OR // microsoft sql server - sql injection, brute-force attacks
+	target.port = 2049 OR // nfs - misconfigured file shares
+	target.port = 3306 OR // mysql - sql injection, brute-force attacks
+	target.port = 3389 OR // rdp - brute-force attacks, bluekeep vulnerability
+	target.port = 5432 OR // postgresql - database breaches, misconfiguration
+	target.port = 5900 OR // vnc - weak passwords, screen hijacking
+	(target.port = 5985 OR target.port = 5986) OR // winrm - remote code execution if exposed
+	target.port = 6379 OR // redis - unauthenticated access, data exfiltration
+	(target.port = 8080 OR target.port = 8443) OR // alternate http/https - exposed admin panels, outdated services
+	target.port = 27017 // mongodb - unsecured nosql databases
+)) OR
+(network.ip_protocol = "UDP" AND (
+	target.port = 53 OR // dns - dns amplification ddos, cache poisoning, tunnelling
+	target.port = 69 OR // tftp - exploited for data leaks (no auth)
+	target.port = 123 OR // ntp - ddnos amplification attacks
+	(target.port = 135 OR target.port = 136 OR target.port = 137 OR target.port = 138 OR target.port = 139) OR // netbios/smb - exploits (e.g., eternalblue), network enumeration
+	(target.port = 161 OR target.port = 162) // snmp - default community strings, info leakage
+))
