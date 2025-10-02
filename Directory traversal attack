@@ -1,0 +1,1 @@
+re.regex(target.file.full_path, `(\.\.\\|\.\.\/){2,}`)
