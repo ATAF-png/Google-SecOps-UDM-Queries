@@ -1,0 +1,3 @@
+metadata.vendor_name = "GITHUB"
+metadata.product_name = "GITHUB"
+metadata.product_event_type = "repository.fork"
