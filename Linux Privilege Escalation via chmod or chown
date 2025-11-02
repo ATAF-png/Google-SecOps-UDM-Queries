@@ -1,0 +1,1 @@
+re.regex(target.process.command_line, `chmod 777`) OR re.regex(target.process.command_line, `chown root`)
