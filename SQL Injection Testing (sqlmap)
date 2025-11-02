@@ -1,0 +1,2 @@
+metadata.log_type = "GCP_LOADBALANCER"
+re.regex(network.http.referral_url, `UNION SELECT`) OR re.regex(network.http.referral_url, `sqlmap`)
