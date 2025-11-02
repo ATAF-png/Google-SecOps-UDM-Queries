@@ -1,0 +1,3 @@
+metadata.event_type = "SETTING_MODIFICATION"
+security_result.action = "ALLOW"
+not re.regex(target.ip, `10\..*`)
