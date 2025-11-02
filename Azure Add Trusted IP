@@ -1,0 +1,2 @@
+metadata.log_type = "AZURE_AD_AUDIT"
+metadata.product_event_type = "AddTrustedIP"
