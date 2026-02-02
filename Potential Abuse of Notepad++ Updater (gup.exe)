@@ -1,3 +1,1 @@
-metadata.event_type = "NETWORK_DNS" and principal.process.file.full_path = /gup.exe/ and network.dns.questions.name != "notepad-plus-plus.org" and network.dns.questions.name != /github.com/
- 
-metadata.event_type = "PROCESS_LAUNCH" and principal.process.file.full_path = /gup.exe/ and target.process.file.full_path != /explorer.exe/ and target.process.file.full_path != /npp.*Installer/ 
+(metadata.event_type = "NETWORK_DNS" and re.regex(principal.process.file.full_path, `gup\.exe`) and network.dns.questions.name != "notepad-plus-plus.org" and not re.regex(network.dns.questions.name, `github\.com`)) or (metadata.event_type = "PROCESS_LAUNCH" and re.regex(principal.process.file.full_path, `gup\.exe`) and not re.regex(target.process.file.full_path, `explorer\.exe`) and not re.regex(target.process.file.full_path, `npp.*Installer`) and target.process.file.full_path != "notepad++.exe" and target.process.file.full_path != "notepad-plus-plus.org")
