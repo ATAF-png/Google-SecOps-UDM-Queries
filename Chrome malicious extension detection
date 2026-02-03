@@ -1,3 +1,4 @@
+domain = "admitab.com" OR domain = "edmitab.com" OR domain = "click.videocontrolls.com" OR domain = "c.undiscord.com" OR domain = "click.darktheme.net" OR domain = "c.jermikro.com" OR domain = "c.untwitter.com" OR domain = "c.unyoutube.net" OR domain = "admitclick.net" OR domain = "addmitad.com" OR domain = "admiitad.com" OR domain = "abmitab.com" OR domain = "admitlink.net"
 metadata.log_type = "CHROME_MANAGEMENT"
 metadata.product_name = "Google Chrome"
 metadata.product_event_type = "EXTENSION_INSTALLED"
