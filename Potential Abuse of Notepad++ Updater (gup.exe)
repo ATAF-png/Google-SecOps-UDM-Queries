@@ -1,1 +1,22 @@
-(metadata.event_type = "NETWORK_DNS" and re.regex(principal.process.file.full_path, `gup\.exe`) and network.dns.questions.name != "notepad-plus-plus.org" and not re.regex(network.dns.questions.name, `github\.com`)) or (metadata.event_type = "PROCESS_LAUNCH" and re.regex(principal.process.file.full_path, `gup\.exe`) and not re.regex(target.process.file.full_path, `explorer\.exe`) and not re.regex(target.process.file.full_path, `npp.*Installer`) and target.process.file.full_path != "notepad++.exe" and target.process.file.full_path != "notepad-plus-plus.org")
+(
+  ip = "95.179.213.0" or
+  domain = "api.skycloudcenter.com" or
+  domain = "api.wiresguard.com" or
+  ip = "61.4.102.97" or
+  ip = "59.110.7.32" or
+  ip = "124.222.137.114"
+) or
+(
+  metadata.event_type = "NETWORK_DNS" and
+  re.regex(principal.process.file.full_path, `gup\.exe`) and
+  network.dns.questions.name != "notepad-plus-plus.org" and
+  not re.regex(network.dns.questions.name, `github\.com`)
+) or
+(
+  metadata.event_type = "PROCESS_LAUNCH" and
+  re.regex(principal.process.file.full_path, `gup\.exe`) and
+  not re.regex(target.process.file.full_path, `explorer\.exe`) and
+  not re.regex(target.process.file.full_path, `npp.*Installer`) and
+  target.process.file.full_path != "notepad++.exe" and
+  target.process.file.full_path != "notepad-plus-plus.org"
+)
