@@ -1,0 +1,34 @@
+metadata.log_type = "CHROME_MANAGEMENT"
+metadata.product_name = "Google Chrome"
+metadata.product_event_type = "EXTENSION_INSTALLED"
+(
+  target.resource.attribute.labels["extension_id"] = "mabbblhhnmlckjbfppkopnccllieeocp" OR
+  target.resource.attribute.labels["extension_id"] = "loiofaagnefbonjdjklhacdhfkolcfgi" OR
+  target.resource.attribute.labels["extension_id"] = "mcaglpclodnaiimhicpjemhcinjfnjce" OR
+  target.resource.attribute.labels["extension_id"] = "jmlgkeaofknfmnbpmlmadnfnfajdlehn" OR
+  target.resource.attribute.labels["extension_id"] = "ahlnchhkedmjbdocaamkbmhppnligmoh" OR
+  target.resource.attribute.labels["extension_id"] = "pnpchphmplpdimbllknjoiopmfphellj" OR
+  target.resource.attribute.labels["extension_id"] = "ljcgnobemekghgobhlplpehijemdgcgo" OR
+  target.resource.attribute.labels["extension_id"] = "dnmfcojgjchpjcmjgpgonmhccibjopnb" OR
+  target.resource.attribute.labels["extension_id"] = "mnacfoefejolpobogooghoclppjcgfcm" OR
+  target.resource.attribute.labels["extension_id"] = "nigamacoibifjohkmepefofohfedblgg" OR
+  target.resource.attribute.labels["extension_id"] = "johobikccpnmifjjpephegmfpipfbfme" OR
+  target.resource.attribute.labels["extension_id"] = "kppfbknppimnoociaomjcdgkebdmenkh" OR
+  target.resource.attribute.labels["extension_id"] = "aohfjaadlbiifnnajpobdhokecjokhab" OR
+  target.resource.attribute.labels["extension_id"] = "gfdbbmngalhmegpkejhidhgdpmehlmnd" OR
+  target.resource.attribute.labels["extension_id"] = "cpcojeeblggnjjgnpiicndnahfhjdobd" OR
+  target.resource.attribute.labels["extension_id"] = "hkkkipfcdagiocekjdhobgmlkhejjfoj" OR
+  target.resource.attribute.labels["extension_id"] = "jaojpdijbaolkhkifpgbjnhfbmckoojh" OR
+  target.resource.attribute.labels["extension_id"] = "ekomkpgkmieaaekmaldmaljljahehkoi" OR
+  target.resource.attribute.labels["extension_id"] = "hkhmodcdjhcidbcncgmnknjppphcpgmh" OR
+  target.resource.attribute.labels["extension_id"] = "nipfdfkjnidadibpbflijepbllfkokac" OR
+  target.resource.attribute.labels["extension_id"] = "behckapcoohededfbgjgkgefgkpodeho" OR
+  target.resource.attribute.labels["extension_id"] = "dfnannaibdndmkienngjahldiofjbkmj" OR
+  target.resource.attribute.labels["extension_id"] = "nhilffccdbcjcnoopblecppbhalagpaf" OR
+  target.resource.attribute.labels["extension_id"] = "goikoilmhcgfidolicnbgggdpckdcoam" OR
+  target.resource.attribute.labels["extension_id"] = "mjcgfimemamogfmekphcfdehfkkbmldn" OR
+  target.resource.attribute.labels["extension_id"] = "nppjmiadmakeigiagilkfffplihgjlec" OR
+  target.resource.attribute.labels["extension_id"] = "mpgaodghdhmeljgogbeagpbhgdbfofgb" OR
+  target.resource.attribute.labels["extension_id"] = "gjlbbcimkbncedhofeknicfkhgaocohl" OR
+  target.resource.attribute.labels["extension_id"] = "mcaihdkeijgfhnlfcdehniplmaapadgb"
+)
