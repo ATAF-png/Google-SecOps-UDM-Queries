@@ -1,0 +1,21 @@
+(
+  (
+    re.regex(target.url, `\/_next\/`) and
+    network.http.response_code = 500
+  ) or
+  (
+    (
+      re.regex(target.url, `^\/admin`) or
+      re.regex(target.url, `^\/dashboard`) or
+      re.regex(target.url, `^\/api\/`)
+    )
+  )
+) or
+(
+  (
+    re.regex(principal.process.parent_process.file.full_path, `node`) nocase and
+    re.regex(principal.process.command_line, `curl|wget|bash|sh\s|python`) nocase
+  ) or
+  re.regex(principal.process.file.full_path, `(nginxs|apaches|miner|payload|pcpcat|react|\.tmp)$`) nocase or
+  re.regex(principal.process.file.full_path, `\/tmp\/`) nocase
+)
