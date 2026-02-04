@@ -1,0 +1,17 @@
+(
+  re.regex(principal.ip_geo_artifact.network.organization_name, `IPIDEA|360 Proxy|Cherry Proxy|922 Proxy|ABC Proxy|Oxy Labs|Zyte|Smartproxy|PIA S5 Proxy|Hola VPN|Galleon VPN|Radish VPN|Aman VPN|SuperVPN|Thunder VPN|Mullvad VPN|M247|Tor Project|Orbot|DigitalOcean|Linode|Vultr|OVH|Hetzner`) nocase
+  or
+  principal.ip_geo_artifact.network.asn = "9009"
+)
+or
+(
+  network.direction = "OUTBOUND" and
+  (
+    target.port = 1194 or
+    target.port = 51820 or
+    target.port = 500 or
+    target.port = 4500 or
+    target.port = 1080 or
+    target.port = 1723
+  )
+)
