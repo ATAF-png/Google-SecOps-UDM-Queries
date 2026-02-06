@@ -1,0 +1,4 @@
+metadata.event_type = "NETWORK_HTTP"
+re.regex(principal.process.command_line, `slack\.com`)
+re.regex(target.url, `bitly|t\.co|tinyurl|app-update-verification\.com`)
+principal.user.userid = "USLACKBOT"
