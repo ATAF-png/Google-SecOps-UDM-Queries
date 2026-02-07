@@ -1,0 +1,2 @@
+metadata.event_type = "NETWORK_HTTP"
+re.regex(target.url, `(robots\.txt|sitemap\.xml|\.env|\.git|\.svn|backup|admin|login|phpinfo|config|\.bak|\.old|\.zip|\.tar)`)
