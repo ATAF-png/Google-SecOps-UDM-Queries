@@ -1,0 +1,6 @@
+metadata.event_type = "NETWORK_CONNECTION"
+target.port = 9389
+network.direction = "INBOUND"
+security_result.action = "ALLOW"
+(metadata.product_event_type = "1644" or metadata.product_event_type = "4662")
+metadata.vendor_name = "Microsoft"
