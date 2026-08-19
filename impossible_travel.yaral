@@ -18,5 +18,5 @@ rule impossible_travel {
         $user over 2h
 
     condition:
-        #country > 1
+        #country > 2
 }
