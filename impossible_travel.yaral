@@ -1,0 +1,22 @@
+rule impossible_travel {
+    meta:
+        author = "Aaron"
+        description = "detects when a user logins from twop different geographical locations within a high velocity timeframe"
+        severity = "Medium"
+        technique = "T1078"
+        log_source = "N/A/"
+        halo = "N/A/"
+        ref = ""
+
+    events:
+        $e.metadata.event_type = "USER_LOGIN"
+        $e.security_result.action = "ALLOW"
+        $country = $e.principal.location.country_or_region
+        $user = $e.principal.user.userid 
+
+    match:
+        $user over 2h
+
+    condition:
+        #country > 1
+}
